@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeBook.MainPage"
+             Title="Add a Recipe">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                                                                        EndPoint="0,1">
+            <GradientStop Color="#DDDDDD"
+                                                                         Offset="0.3"/>
+            <GradientStop Color="#EEEEEE"
+                                                                         Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+        <StackLayout >
+            <Frame CornerRadius="15" Margin="10,5,10,0" BackgroundColor="#2E4C6D" Padding="10">
+                <Entry x:Name="Title"
+                       Placeholder="Recipe Title"
+                       PlaceholderColor="#FF5403"
+                       TextColor="#DDDDDD"
+                       FontAttributes="Bold"
+                       />
+            </Frame>
+
+            <Frame CornerRadius="15" Margin="10,5,10,0" BackgroundColor="#2E4C6D" Padding="10">
+                <Entry x:Name="Image"
+                       Placeholder="Image"
+                       PlaceholderColor="#FF5403"
+                       TextColor="#DDDDDD"
+                       FontAttributes="Bold"
+                       Keyboard="Url"
+                       />
+            </Frame>
+            
+            <Frame CornerRadius="15" Margin="10,5,10,0" BackgroundColor="#2E4C6D" Padding="10">
+                <Entry x:Name="Ingredients"
+                       Placeholder="Ingredients"
+                       PlaceholderColor="#FF5403"
+                       TextColor="#DDDDDD"
+                       FontAttributes="Bold"
+                       />
+            </Frame>
+
+
+            <Frame CornerRadius="15" Margin="10,5,10,0" BackgroundColor="#2E4C6D" Padding="10">
+                <Editor x:Name="Description"
+                       Placeholder="Description"
+                       PlaceholderColor="#FF5403"
+                       TextColor="#DDDDDD"
+                       FontAttributes="Bold"
+                       HeightRequest="100"
+                       />
+            </Frame>
+            
+            
+
+            <Button x:Name="SaveBtn" Text="Save" Margin="50,5" BackgroundColor="#F90716" CornerRadius="10" TextColor="White" Clicked="SaveBtn_Clicked"/>
+            <Button x:Name="RecipeBookBtn" Margin="50,5" BackgroundColor="#FF5403" CornerRadius="10" TextColor="White" Text="Recipe Book" Clicked="RecipeBookBtn_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
